@@ -1,0 +1,1270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    /* background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(50px); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(50px); 
+    z-index: -1;
+}
+.header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg, transparent,white,transparent);
+    transition: .3s;
+}
+.header:hover::after{
+    left: 100%;
+}
+/* .Logo1{
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    } */
+.Logo{
+font-size: 2rem;
+color: white;
+text-decoration: none;
+font-weight: 700;
+}
+.navbar a{
+    font-size: 1.5rem;
+    color:  white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+.icon{
+    position: absolute;
+    right: 5%;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width:992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+@media(max-width:768px){
+    .icon{
+        display: inline-flex;
+
+    }
+    #check:checked~.icon #menu-icon{
+        display: none;
+    }
+    .icon #close-icon{
+        display: none;
+    }
+    #check:checked~.icon #close-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height:0;
+        background: rgba(0, 0, 0, -1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, -1);
+        overflow: hidden;
+        transition: .3s ease;
+
+    }
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .5s ease;
+    }
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        transition-delay: calc(.15s * var(--i));
+        opacity: 1;
+    }
+    .main img{
+        width: 100%;
+        height: 56vh;
+    }
+}
+video{
+    width: 100%;
+    position: relative;
+}
+.first-img{
+    position: absolute;
+    top: 0;
+    background: rgb(1, 1, 20);
+    border: none;
+    width: 100%;
+    height: 120vh;
+    opacity:0.67;
+}
+.first-img img{
+  width: 400px;
+  height: 200px;
+  margin-left: 480px;
+  margin-top: 260px;
+    
+}
+.first-img h1{
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+
+}
+.first-img button{
+    width: 170px;
+    height: 40px;
+    margin-top: 40px;
+    margin-left: 560px;
+    border-radius: 10px;
+    color: red;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 800;
+}
+.cards{
+    width: 100%;
+    height: 300px;
+    margin-top: -70px;
+    opacity: .99;
+    display: flex;
+    background-color:rgb(1, 1, 20);
+}
+.card1{
+    width: 250px;
+    height: 180px;
+    margin-top: 80px;
+    margin-left: 300px;
+    border-radius: 10px;
+    border: 1px solid rgb(37, 37, 37);
+    background-color: rgb(1, 1, 20);
+}
+.card1:hover{
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .8s;
+}
+.card:hover{
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .8s;
+}
+.card1 h2{
+    color: rgb(87, 86, 86);
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.card1 h1{
+    color:rgb(78, 59, 22);
+    font-size: 31px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.card1 p{
+    color: rgb(87, 86, 86);
+    font-size: 17px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.card{
+    width: 250px;
+    height: 180px;
+    margin-top: 80px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(37, 37, 37);
+    background-color:rgb(1, 1, 20);
+}
+.card h2{
+    color: rgb(87, 86, 86);
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.card h1{
+    color:rgb(110, 110, 110);
+    font-size: 31px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.card p{
+    color: rgb(87, 86, 86);
+    font-size: 17px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.cultpass{
+    background-color:rgb(1, 1, 26);
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+}
+.cultpass h2{
+    color: rgb(87, 86, 86);
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 70px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.cultpass h1{
+  color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.cultpass-cards{
+    width: 100%;
+    display: flex;
+}
+.cultpass-card img{
+    width: 550px;
+    height: 350px;
+    margin-left: 100px;
+    margin-top: 70px;
+    /* transition: transform 0.3s ease; */
+}
+/* .cultpass-card img:hover{
+    transform: scale(1.1);
+} */
+.cultpass-card1 img{
+    width: 550px;
+    height: 350px;
+    margin-left: 30px;
+    margin-top: 70px;
+    /* transition: transform 0.3s ease; */
+}
+/* .cultpass-card1 img:hover{
+    transform: scale(1.1);
+} */
+.cultpass-card2 img{
+    width: 370px;
+    height: 300px;
+    margin-left: 100px;
+    border-radius: 30px;
+    margin-top: 150px;
+    transition: transform 0.3s ease;
+}
+.cultpass-card2 img:hover{
+    transform: scale(1.1);
+}
+.cultpass-card3 img{
+    width: 370px;
+    height: 300px;
+    margin-left: 20px;
+    margin-top: 150px;
+    transition: transform 0.3s ease;
+}
+.cultpass-card3 img:hover{
+    transform: scale(1.1);
+}
+.cultpass-card4 img{
+    width: 360px;
+    height: 300px;
+    margin-left: 20px;
+    border-radius: 30px;
+    margin-top: 150px;
+    transition: transform 0.3s ease;
+}
+.cultpass-card4 img:hover{
+    transform: scale(1.1);
+}
+
+.fun{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 1, 26);
+}
+.fun h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 150px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.fun-cards{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center; 
+
+}
+.fun-cards1{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center; 
+
+}
+.fun-card img{
+    width: 300px;
+    height: 250px; 
+}
+
+.learn{
+ width: 100%;
+ height: 100%;
+ margin-top: -5px;
+ background-color:rgb(1, 1, 26);
+}
+.learn h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 100px;
+    font-family: 'BrandonTextWeb-Regular';
+}
+.learn-cards{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.learn-card{
+    width: 250px;
+    height: 550px;
+    margin-left: 20px;
+    border-radius: 15px;
+    background:linear-gradient(rgb(131, 78, 131),rgb(1, 1, 26));
+}
+.learn-card img{
+    width: 250px;
+    height: 200px;
+    position:absolute;
+}
+.learn-card h4{
+    position: relative;
+    top: 130px;
+   text-align: center;
+    font-family: 'BrandonTextWeb-Regular';
+    font-size: 20px;
+    color: white;
+}
+.learn-card h1{
+    position:relative;
+    top: 30px;
+    padding-left: 10px;
+    font-size: 40px;
+    color:orange;
+}
+.learn-card h2{
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.learn-card h3{
+    margin-top: 40px;
+    color: white;
+    margin-top: 30px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 17px;
+}
+.learn-card button{
+    width: 100px;
+    margin-top: 30px;
+    height: 50px;
+    border: none;
+    background-color: rgb(63, 62, 62);
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+}
+.learn-card #button{
+    width: 80px;
+    margin-top: 30px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    margin-left: 10px;
+    font-weight: 800;
+    color:red;
+    cursor: pointer;
+}
+.cult{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 1, 26);
+}
+.cult-cards{
+    width: 100%;
+    height: 100%;
+    padding-top: 130px;
+    display: flex;
+}
+.cult-card{
+    width: 400px;
+    height: 400px;
+    margin:auto;
+    border-radius: 30px;
+    background:linear-gradient(rgb(156, 196, 209),rgb(1, 1, 26));
+    transition: transform 0.3s ease;
+}
+.cult-card:hover{
+    transform: scale(1.1);
+}
+.cult-card h1{
+    color: white;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.cult-card h3{
+    color: white;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.cult-card img{
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+.hub-main{
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: rgb(1, 1, 26);
+}
+.hub{
+    width: 900px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50px;
+    background: linear-gradient(rgb(85, 67, 73),rgb(46, 46, 46));
+    display: flex;
+}
+.txt h1{
+    padding-top: 30px;
+    margin-left: 40px;
+    color: white;
+    font-size: 40px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.txt h3{
+    padding-top: 20px;
+    margin-left: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.txt h2{
+    padding-top: 50px;
+    margin-left: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.txt ul{
+    padding-top: 30px;
+    margin-left: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.txt ul li{
+    margin-top: 10px;
+}
+.gif img{
+    width: 80%;
+    margin-left: 130px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 100%;
+}
+.txt button{
+    width: 120px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.txt button img{
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+.join{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 1, 26);
+}
+.join h1{
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    padding-top: 100px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.join-cards{
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+}
+.join-card{
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 15px;
+    background:linear-gradient(rgb(131, 78, 131),rgb(1, 1, 26));
+    transition: transform 0.3s ease;
+}
+.join-card:hover{
+    transform: scale(1.1);
+}
+.join-card h1{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    color: rgb(235, 170, 50);
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+.join-card h4{
+    text-align: center;
+    font-size: 17px;
+    color:white;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    margin: 30px;
+}
+.join-card h3{
+    text-align: center;
+    font-size: 14px;
+    color:white;
+    cursor: pointer;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: rgb(72, 72, 170);
+}
+.we{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 1, 26);
+}
+.we img{
+    width: 100%;
+    margin-top:130px;
+    height: 80vh;
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: black;
+}
+.footer-card{
+    width: 450px;
+    height: 400px;
+}
+.footer-card h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    color: white;
+    margin-top: 50px;
+}
+.footer-card p{
+    text-align: center;
+    font-size: 17px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    color: rgb(58, 58, 58);
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.footer-card1{
+    width: 200px;
+    height: 400px;
+}
+.footer-card1 h4{
+    text-align: center;
+    font-size: 17px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    color: rgb(78, 78, 78);
+    margin-top: 50px;
+   
+}
+.footer-card1 button{
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.footer-card1 button img{
+    width: 100%;
+    height: 50px;
+}
+
+
+@media(max-width:768px){
+    video{
+        width: 100%;
+    }
+    .first-img{
+        width: 100%;
+        height: 100%;
+    }
+    .first-img img{
+        margin-left: 230px;
+        margin-top: 100px;
+        width: 300px;
+        height: 100px;
+    }
+    .first-img button{
+        margin-left: 280px;
+    }
+    .cards{
+        margin-top:-10px;
+        height: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .card1{
+       margin: auto;
+       margin-top: 20px;
+       width: 100%;
+    }
+    .card{
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .cultpass-cards{
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .cultpass-card{
+        width: 100%;
+    }
+    .cultpass-card1{
+        width: 100%;
+    }
+    .cultpass-card2{
+        width: 100%;
+    }
+    .cultpass-card3{
+        width: 100%;
+    }
+    .cultpass-card4{
+        width: 100%;
+    }
+    .cultpass-card5{
+        width: 100%;
+    }
+    .cultpass-card img{
+       width: 100%;
+       height: 350px; 
+       border-radius: none;
+       margin-left: 0px;
+    }
+    .cultpass-card1 img{
+        width: 100%;
+       height: 350px; 
+       margin-top: 30px;
+       margin-left: 0px;
+    }
+    .cultpass-card2 img{
+        width: 100%;
+       height: 350px; 
+       margin-top: 30px;
+       margin-left: 0px;
+    }
+    .cultpass-card3 img{
+        width: 100%;
+       height: 350px; 
+       margin-top: 30px;
+       margin-left: 0px;
+    }
+    .cultpass-card4 img{
+        width: 100%;
+       height: 350px; 
+       margin-top: 30px;
+       margin-left: 0px;
+    }
+    .cultpass-card5 img{
+        width: 100%;
+       height: 350px; 
+       margin-top: 30px;
+       margin-left: 0px;
+    }
+    .fun-cards{
+        flex-wrap: wrap;
+    }
+    .fun-cards1{
+        flex-wrap: wrap;
+    }
+    .learn-cards{
+        flex-wrap: wrap;
+    }
+    .cult-cards{
+        flex-wrap: wrap;
+        padding-top: 50px;
+    }
+    .cult-card{
+        width: 500px;
+        margin-top: 10px;
+        height: 400px;
+    }
+    .hub{
+        width: 100%;
+        margin: auto;
+    }
+    .gif img{
+        width: 80%;
+        margin-left: 40px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        height: 100%;
+    }
+    .join-cards{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .footer{
+        flex-wrap: wrap;
+    }
+
+}
+@media(max-width:480px){
+    .first-img img{
+        margin-left: 130px;
+        margin-top: 50px;
+        width: 200px;
+        height: 100px;
+    }
+    .first-img button{
+        margin-left: 150px;
+        width: 140px;
+        height: 30px;
+        margin-top: 10px;
+        font-weight: 100;
+    }
+    .first-img h1{
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    .cultpass h1{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    .cultpass-cards{
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .cultpass-card img{
+        height: 200px; 
+    }
+    .cultpass-card1 img{
+        height: 200px; 
+    }
+    .cultpass-card2 img{
+        height: 200px; 
+    }
+    .cultpass-card3 img{
+        height: 200px;
+    }
+    .cultpass-card4 img{
+        height: 200px; 
+    }
+    .cultpass-card5 img{
+        height: 200px; 
+    }
+    .gif img{
+        width: 94%;
+        margin-left: 10px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        height: 100%;
+    }
+    .txt h1{
+        font-size: 22px;
+    }
+    .txt h2{
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    
+}
+@media(max-width:415px){
+    .first-img img{
+        display: none;
+    }
+    .first-img button{
+        display: none;
+    }
+    .first-img h1{
+        display: none;
+    }
+}
+
+/* ...............................................care start................ */
+
+.lab{
+    width: 100%;
+    height: auto;
+    background-color: rgb(224, 224, 224);
+}
+.lab h1{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 100px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+}
+.lab h4{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(82, 82, 82);
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+}
+.lab-cards{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+}
+.lab-cards-card{
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    cursor: pointer;
+    /* border: 2px solid gold; */
+}
+.lab-cards-card img{
+    width: 100%;
+    height: 250px;
+}
+.lab-cards-card h3{
+    margin-left: 10px;
+    padding-top: 10px;
+    color: rgb(100, 100, 100);
+}
+.faqs{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    background-color: black;
+}
+.faq{
+    width: 86%;
+    height: auto;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+.faq h1{
+    padding-top: 30px;
+    font-weight: 900;
+    font-size: 40px;
+    color: white;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+
+}
+.faq h3{
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+
+}
+.faq ul{
+    font-size: 20px;
+    color: white;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+}
+.faq ul li{
+    margin-top: 20px;
+}
+.last-best h1{
+    margin-top: 40px;
+    font-size: 50px;
+    color: rgb(184, 145, 72);
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-weight: 900;
+}
+.last-best h2{
+    font-size: 30px;
+    color: rgb(184, 145, 72);
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-weight: 900;
+}
+.last-best h3{
+    font-size: 20px;
+    color: rgb(184, 145, 72);
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-weight: 900;
+}
+@media(max-width:768px){
+    .lab-cards{
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    } 
+    .lab-cards-card{
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+    } 
+    .lab-cards-card img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ...................care stop ..................   */
+
+/* ...................................mind start.................  */
+
+.mind{
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(224, 224, 224); */
+}
+.mind h1{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 100px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+}
+.mind h4{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(82, 82, 82);
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+}
+.mind-cards{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+.mind-card{
+    width: 550px;
+    height: auto;
+    margin: auto;
+    /* box-shadow: 0 4px 8px gray; */
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* border: 1px solid black; */
+}
+.mind-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.mind-card img{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.mind-card h1{
+    margin-top: -85px;
+    margin-left: -64px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-size: 25px;
+}
+.mind-card p{
+    margin: 15px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-size: 17px; 
+    color: rgb(77, 77, 77);
+}
+.mind-card h4{
+    margin-left: 100px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-size: 17px; 
+    color: rgb(77, 77, 77);
+}
+
+@media(max-width:768px){
+    .mind-cards{
+        flex-wrap: wrap;
+    }
+    .mind-card{
+        width: 100%;
+        margin-top: 50px;
+        height: auto;
+    }
+}
+@media(max-width:480px){
+    .mind-card{
+        flex-wrap: wrap;
+    }
+.mind-card img{
+    width: 100%;
+    margin-left: 0px;
+}
+}
+/* ........................mind end..................  */
+
+/* ..............store start..........................  */
+
+.store{
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+}
+.store img{
+    width: 100%;
+    height: 100%;
+}
+.tshirt{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+.tshirt-cards{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    /* background-color: red; */
+}
+.tshirt h1{
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-size: 25px;
+    font-weight: 700; 
+    text-align: center;
+}
+.tshirt-card{
+    width: 200px;
+    height: auto;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tshirt-card img{
+    width: 100%;
+    height: 200px;
+}
+.tshirt-card h4{
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-size: 17px; 
+    color: rgb(78, 78, 78);
+    text-align: center;
+}
+.tshirt-card h3{
+    margin-left: -130px;
+    padding-top: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+    font-size: 17px; 
+    color: rgb(78, 78, 78);
+    text-align: center;
+}
+.faq1{
+    width: 86%;
+    height: auto;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+.faq1 h1{
+    padding-top: 30px;
+    font-weight: 900;
+    font-size: 40px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+
+}
+.faq1 h3{
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+
+}
+.faq1 ul{
+    font-size: 20px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;  
+}
+.faq1 ul li{
+    margin-top: 20px;
+}
+.contact{
+    width: 100%;
+    height: auto;
+    background-color: rgb(1, 1, 26);
+    margin-top: 100px;
+}
+.contact h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; 
+    color: white; 
+}
+.contact-img{
+    display: flex;
+}
+.contact-img img{
+    width: 600px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.contact-img form{
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.contact-img form input{
+    width: 400px;
+    height: 40px;
+    padding-left: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px white;
+}
+#submit{
+    width: 150px;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 4px 8px black;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: red;
+    color: white;
+    box-shadow: 0 4px 8px white;
+}
+.Sportswear{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    background-color: black;
+}
+.Sportswear h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; 
+    color: white; 
+    padding-top: 40px;
+}
+.Sportswear p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 40px;
+    font-weight: 400;
+    font-family: Inter-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; 
+    color: rgb(94, 94, 94); 
+}
+
+@media(max-width:768px){
+.tshirt-cards{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.tshirt-card{
+    width: 100%;
+    height: auto;
+}
+.tshirt-card img{
+    width: 100%;
+    height: 400px;
+}
+.contact-img{
+    flex-wrap: wrap;
+}
+.contact-img img{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+}
+.contact-img form{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+}
+.contact-img form input{
+    width: 100%;  
+}
+.Sportswear p{
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+}
+}
+
+
+
+@media(max-width:480px){
+    .tshirt-card img{
+        width: 100%;
+        height: 100%;
+    }
+    .Sportswear p{
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

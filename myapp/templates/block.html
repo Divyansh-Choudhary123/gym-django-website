@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <!-- <img src="{% static 'img/logo.jpg' %}" alt="" class="Logo1"> -->
+            <a href="" class="Logo">cult.fit</a>
+            <input type="checkbox" id="check">
+            <label for="check" class="icon">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+                <i class="fa-solid fa-xmark" id="close-icon"></i>
+            </label>
+            <div class="navbar">
+                <a href="/" style="--i:0;">FITNESS</a>
+                <a href="care" style="--i:1;">CARE</a>
+                <a href="mind" style="--i:2;">MIDE</a>
+                <a href="store" style="--i:3;">STORE</a>
+            </div>
+        </div>
+        </div>
+        {% block content %}
+ 
+        {% endblock content %}
+        <div class="footer">
+            <div class="footer-card">
+            <h2>cult.fit</h2>
+            <p>At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</p>
+            </div>
+            <div class="footer-card1">
+             <h4>cult.fit for business <br> <br> <br>
+                cult.fit franchise <br><br><br>
+                corporate partnerships <br><br><br>
+                cult pass network <br><br><br>
+                t&c for business</h4>
+            </div>
+            <div class="footer-card1">
+                <h4> partner.fit <br> <br> <br>
+                blogs<br> <br> <br>
+                security<br> <br> <br>
+                careers<br> <br> <br></h4>
+            </div>
+            <div class="footer-card1">
+                <h4> contact us<br> <br> <br>
+                privacy policy<br> <br> <br>
+                cult bmi calculator<br> <br> <br>
+                terms & conditions<br> <br> <br></h4>
+            </div>
+            <div class="footer-card1">
+                <button><img src="{% static 'img/app.jpg' %}" alt=""></button> 
+                <button><img src="{% static 'img/get.jpg' %}" alt=""></button>
+            </div>
+          </div>
+</body>
+</html>

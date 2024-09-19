@@ -1,0 +1,209 @@
+{% extends 'block.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    {% block content %}
+   <video autoplay loop muted src="{% static 'img/first.mp4' %}"></video>
+   <div class="first-img">
+    <img src="{% static 'img/abc.jpg' %}" alt="">
+    <h1>A fitness movement that is worth <br>breaking a sweat for</h1>
+    <button>EXPLORE CULTPASS</button>
+   </div>
+   <div class="cards">
+        <div class="card1">
+          <h2>Cultpass</h2>
+          <h1>ELITE</h1>
+          <p>Unlimited access to group classes, all gyms and at-home workouts</p>
+        </div>
+        <div class="card">
+            <h2>Cultpass</h2>
+            <h1>PRO</h1>
+            <p>Unlimited access to group classes, all gyms and at-home workouts</p>
+        </div>
+        <div class="card">
+            <h2>Cultpass</h2>
+            <h1>SELECT</h1>
+            <p>Unlimited access to group classes, all gyms and at-home workouts</p>
+        </div>
+   </div>
+   <div class="cultpass">
+    <h2>Cultpass</h2>
+    <h1>One membership for all your fitness needs</h1>
+    <div class="cultpass-cards">
+        <div class="cultpass-card">
+            <img src="{% static 'img/y1.jpg' %}" alt="">
+        </div>
+        <div class="cultpass-card1">
+            <img src="{% static 'img/y2.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="cultpass-cards">
+        <div class="cultpass-card2">
+            <img src="{% static 'img/y3.jpg' %}" alt="">
+        </div>
+        <div class="cultpass-card3">
+            <img src="{% static 'img/y4.jpg' %}" alt="">
+        </div>
+        <div class="cultpass-card4">
+            <img src="{% static 'img/y5.jpg' %}" alt="">
+        </div>
+    </div>
+   </div>
+   <div class="fun">
+    <h1>Fun, trainer led group classes</h1>
+    <div class="fun-cards">
+        <div class="fun-card">
+            <img src="{% static 'img/1g.jpg' %}" alt="">
+        </div>
+        <div class="fun-card">
+            <img src="{% static 'img/2g.jpg' %}" alt="">
+        </div>
+        <div class="fun-card">
+            <img src="{% static 'img/3g.jpg' %}" alt="">
+        </div>
+        <div class="fun-card">
+            <img src="{% static 'img/4g.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="fun-cards1">
+        <div class="fun-card">
+            <img src="{% static 'img/5g.jpg' %}" alt="">
+        </div>
+        <div class="fun-card">
+            <img src="{% static 'img/6g.jpg' %}" alt="">
+        </div>
+        <div class="fun-card">
+            <img src="{% static 'img/7g.jpg' %}" alt="">
+        </div>
+        <div class="fun-card">
+            <img src="{% static 'img/8.jpg' %}" alt="">
+        </div>
+    </div>
+   </div>
+  <div class="learn">
+        <h1>cultpass</h1>
+        <div class="learn-cards">
+            <div class="learn-card">
+                <img src="{% static 'img/1c.jpg' %}" alt="">
+                <h4>cultpass</h4>
+                <h1>ELITE</h1>
+                <h2>Unlimited access to</h2>
+                <h3>- At-center group classes</h3>
+                <h3>- All ELITE & PRO gyms</h3>
+                <h3>- At-home live workouts</h3>
+                <button>TRY FOR FREE</button> <button id="button">LEARN MORE</button>
+            </div>
+            <div class="learn-card">
+                <img src="{% static 'img/2c.jpg' %}" alt="">
+                <h4>cultpass</h4>
+                <h1>PRO</h1>
+                <h2>Unlimited access to</h2>
+                <h3>-  All PRO gyms</h3>
+                <h3>- 2 Sessions/month at ELITE gyms & group classes</h3>
+                <h3>- At-home live workouts</h3>
+                <button>TRY FOR FREE</button> <button id="button">LEARN MORE</button>
+            </div>
+            <div class="learn-card">
+                <img src="{% static 'img/3c.jpg' %}" alt="">
+                <h4>cultpass</h4>
+                <h1>PLAY</h1>
+                <h2>Unlimited access to</h2>
+                <h3>- Badminton, swimming & other sports</h3>
+                <h3>- Guaranteed playing partner</h3>
+                <h3>- Guided sessions with experts</h3>
+                <button>TRY FOR FREE</button> <button id="button">LEARN MORE</button>
+            </div>
+            <div class="learn-card">
+                <img src="{% static 'img/4c.jpg' %}" alt="">
+                <h4>cultpass</h4>
+                <h1>SELECT</h1>
+                <h2>Unlimited access to</h2>
+                <h3>- One center that you choose</h3>
+                <h3>- Limited sessions* in other centers & gyms in your city</h3>
+                <h3>- At-home live workouts</h3>
+                <button>TRY FOR FREE</button> <button id="button">LEARN MORE</button>
+            </div>
+        </div>
+  </div>
+  <div class="cult">
+    <div class="cult-cards">
+        <div class="cult-card">
+            <h1>Cult Transform</h1>
+            <h3>Get coached to lose weight for good</h3>
+            <img src="{% static 'img/1t.jpg' %}" alt=""> 
+        </div>
+        <div class="cult-card">
+           <h1>The .fit way</h1>
+           <h3>Making health easy, one day at a time</h3>
+           <img src="{% static 'img/2t.jpg' %}" alt=""> 
+        </div>
+    </div>
+    <div class="cult-cards">
+        <div class="cult-card">
+            <h1>Workout Gear</h1>
+            <h3>Everything you need for your workout</h3>
+            <img src="{% static 'img/3t.jpg' %}" alt=""> 
+        </div>
+        <div class="cult-card">
+            <h1>Sugar.fit</h1>
+            <h3>Reverse Type 2 Diabetes and Prediabetes</h3>
+            <img src="{% static 'img/4t.jpg' %}" alt=""> 
+        </div>
+    </div>
+  </div>
+  <div class="hub-main">
+    <div class="hub">
+        <div class="txt">
+          <h1>Wellness Hub</h1>
+          <h3>One place for all your well-being needs</h3>
+          <ul>
+            <li>WORKOUT GEAR ></li>
+            <li>LABS ></li>
+            <li>MINDFULNESS ></li>
+          </ul>
+        </div>
+        <div class="gif">
+            <img src="{% static 'img/1z.gif' %}" alt="">
+        </div>
+    </div>
+  </div>
+  <div class="hub-main">
+    <div class="hub">
+        <div class="txt">
+            <h1>Download the most loved fitness app</h1>
+            <h2>Start your fitness journey with us. Join the cult!</h2>
+            <button><img src="{% static 'img/app.jpg' %}" alt=""></button> <button><img src="{% static 'img/get.jpg' %}" alt=""></button>
+          </div>
+          <div class="gif">
+              <img src="{% static 'img/1a.jpg' %}" alt="">
+          </div>
+    </div>
+  </div>
+  <div class="join">
+    <h1>Join the cult family</h1>
+    <div class="join-cards">
+        <div class="join-card">
+            <h1>Careers at Cult</h1>
+            <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima dolores sunt soluta....</h4>
+            <h3>LEARN MORE</h3>
+        </div>
+        <div class="join-card">
+            <h1>Cult.fit franchise oppertunites</h1>
+            <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima dolores sunt soluta....</h4>
+            <h3>LEARN MORE</h3>
+        </div>
+    </div>
+  </div>
+  <div class="we">
+    <img src="{% static 'img/ss.png' %}" alt="">
+  </div>
+  {% endblock content%}
+</body>
+</html>
